@@ -1,18 +1,12 @@
 
     - name: Install yum utils
-      yum:
-        name: yum-utils
+      yum: 
+        name: "{{ item }}" 
         state: latest
-
-    - name: Install device-mapper-persistent-data
-      yum:
-        name: device-mapper-persistent-data
-        state: latest
-
-    - name: Install lvm2
-      yum:
-        name: lvm2
-        state: latest
+      with_items:
+        - device-mapper-persistent-data
+        - lvm2
+        - yum-utils
 
     - name: Add Docker repo
       get_url:

@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder ".", "/vagrant", type: "nfs"
 
     # Copy nginx src to Guest Machine
-	  #config.vm.provision "file", source: "./src", destination: "$HOME/test/src"
+	  config.vm.provision "file", source: "./src", destination: "$HOME/test/src"
 
     config.vm.provision "shell", inline: <<-SHELL
       sudo yum install ansible -y

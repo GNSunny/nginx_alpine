@@ -5,7 +5,10 @@
 - name: Check if container is running
   shell: docker ps
   register: output
-- debug: var=output
+
+- name: debug the output 
+  debug: 
+    var: output
 
     
      
