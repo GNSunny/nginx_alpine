@@ -1,5 +1,5 @@
 - name: start the container
-  command: docker run -p 80:80 -td web:latest 
+  command: docker run -t -d -p 80:80 web:latest 
       
 
 - name: Check if container is running
