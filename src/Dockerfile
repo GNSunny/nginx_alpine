@@ -13,11 +13,11 @@ RUN rm -rf /etc/nginx/nginx.conf \
 COPY nginx.conf /etc/nginx/nginx.conf 
 COPY index.html /var/www/index.html
 
-
 EXPOSE 80
 
 #STOPSIGNAL SIGTERM
 
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
+#CMD ["nginx-debug", "-g", "daemon off;"]
 
 
