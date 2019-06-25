@@ -1,5 +1,5 @@
 ---
 - include: install_docker.yml
-- include: docker_build.yml
-- include: start_container.yml
+- include: docker_build_image.yml
+- include: container_instance.yml
 
