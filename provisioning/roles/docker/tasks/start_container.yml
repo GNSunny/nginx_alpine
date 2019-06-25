@@ -1,0 +1,11 @@
+- name: start the container
+  command: docker run -p 80:80 -td web:latest 
+      
+
+- name: Check if container is running
+  shell: docker ps
+  register: output
+- debug: var=output
+
+    
+     
